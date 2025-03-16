@@ -1,3 +1,6 @@
 .general {
-  font-size: 62.5%; /* 1rem = 10px */
+  /*font-size: 62.5%; /* 1rem = 10px */
+}
+.test {
+  font-size: var(--font-size-3xl);
 }
