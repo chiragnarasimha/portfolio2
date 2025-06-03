@@ -1,7 +1,5 @@
-import GuessGame from "@/games/guessTheLetterGame/GuessGame";
+import GuessGame from "@/lib/features/games/guessTheLetterGame/GuessGame";
 
 export default function Home() {
-  return (
-      <GuessGame />
-  );
+  return <GuessGame />;
 }

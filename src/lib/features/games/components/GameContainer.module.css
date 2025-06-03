@@ -1,0 +1,5 @@
+.section {
+  width: var(--game-width);
+  max-height: var(--game-max-height);
+  border: 1px solid #ccc;
+}
