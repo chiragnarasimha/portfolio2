@@ -42,7 +42,9 @@
   /* Game Related Variables */
   --game-width: 350px;
   --game-max-height: 600px;
-  --game-title-font-size: x-large;
+  --game-title-font-size: 2.5rem;
+
+  --text-p-fs: 1.6rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -75,6 +77,9 @@
     --mantle: #292c3c;
     --crust: #232634;
   }
+}
+html {
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 html,

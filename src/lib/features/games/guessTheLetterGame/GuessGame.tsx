@@ -6,7 +6,7 @@ import GameContainer from "@/lib/features/games/components/GameContainer";
 
 const GuessGame = () => {
   return (
-    <GameContainer id={"guess-game"} className={styles.container}>
+    <GameContainer id={"guess-game"}>
       <h1 className={styles.title}>Guess Game</h1>
       <UserNameForm />
     </GameContainer>

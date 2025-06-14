@@ -1,4 +1,3 @@
-/* filepath: /Users/chirag/ChiragProjects/React/portfolio2/src/lib/components/StyledButton.tsx */
 import React, { ForwardedRef, forwardRef } from "react";
 import styles from "./StyledButton.module.css";
 type Props = {

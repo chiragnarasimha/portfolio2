@@ -10,6 +10,18 @@ import {
 import StyledInput from "@/lib/components/StyledInput";
 import StyledButton from "@/lib/components/StyledButton";
 
+const triggerValidationFeedback = (
+  inputRef: React.RefObject<HTMLInputElement | null>,
+  message: string,
+) => {
+  const field = inputRef.current;
+  if (field) {
+    field.setCustomValidity(message);
+    field.reportValidity();
+    field.focus();
+  }
+};
+
 const UserNameForm = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const inputDisabled = useAppSelector(selectGuessGameInputDisabled);
@@ -22,16 +34,15 @@ const UserNameForm = () => {
     const nameRegex = /^[A-Za-z]{2,15}$/;
 
     if (!userInput) {
-      inputRef.current.setCustomValidity("Please enter your name");
-      inputRef.current.reportValidity();
+      triggerValidationFeedback(inputRef, "Please enter your name");
       return;
     }
 
     if (!nameRegex.test(userInput)) {
-      inputRef.current.setCustomValidity(
-        "Please enter a valid first name (2-15 letters, no numbers, spaces or special characters)"
+      triggerValidationFeedback(
+        inputRef,
+        "Please enter a valid first name (2-15 letters, no numbers, spaces or special characters)",
       );
-      inputRef.current.reportValidity();
       return;
     }
 
@@ -44,11 +55,6 @@ const UserNameForm = () => {
     }
   };
 
-  const handlePointerDownEvents = (
-    event: React.PointerEvent<HTMLButtonElement>
-  ) => {
-    submitHandler();
-  };
   return (
     <form
       className={styles.form}
@@ -68,7 +74,7 @@ const UserNameForm = () => {
         variant="primary"
         disabled={inputDisabled}
         className={styles.button}
-        onPointerDown={handlePointerDownEvents}
+        type="submit"
       >
         Done
       </StyledButton>

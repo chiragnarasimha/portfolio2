@@ -1,24 +1,19 @@
 .form {
-    display: flex;
-    justify-content: space-around;
-}
-
-.container {
-    /*display: flex;*/
-    /*flex-direction: column;*/
+  display: flex;
+  justify-content: space-around;
 }
 
 .title {
-    font-size: var(--game-title-font-size);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
+  font-size: var(--game-title-font-size);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .button {
-    width: min-content;
-    height: 42%;
-    align-self: flex-end;
-    font-size: small;
+  width: min-content;
+  height: 42%;
+  align-self: flex-end;
+  font-size: small;
 }
