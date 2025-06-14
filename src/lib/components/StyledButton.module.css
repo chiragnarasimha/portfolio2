@@ -1,0 +1,27 @@
+.button {
+  display: flex;
+  /* TODO: Delete this  */
+  min-height: 3rem;
+  min-width: 5rem;
+  /* TODO: End */
+  /* text-align: center; */
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 0.5rem;
+
+  transition: background-color 0.2s ease;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+.primary {
+  background-color: var(--flamingo);
+  color: var(--mantle);
+  /* color: var(); */
+}
+.primary:hover,
+.primary:active {
+  background-color: var(--rosewater);
+}

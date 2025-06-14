@@ -65,6 +65,7 @@ const UserNameForm = () => {
         onChange={inputChangeHandler}
       />
       <StyledButton
+        variant="primary"
         disabled={inputDisabled}
         className={styles.button}
         onPointerDown={handlePointerDownEvents}
