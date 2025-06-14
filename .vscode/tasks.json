@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [
+        {
+          "owner": "nextjs",
+          "pattern": {
+            "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$"
+            // "file": 1,
+            // "line": 2,
+            // "column": 3,
+            // "severity": 4,
+            // "message": 5
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^\\s*✓ Starting\\.\\.\\.$",
+            "endsPattern": "^\\s*✓ Ready in \\d+ms$"
+          }
+        }
+      ],
+      "label": "Launch Vite",
+      "detail": "next dev --turbopack",
+      "isBackground": true
+    }
+  ]
+}

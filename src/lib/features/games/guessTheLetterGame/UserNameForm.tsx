@@ -7,6 +7,8 @@ import {
   selectGuessGameInputDisabled,
   setGuessGameUserName,
 } from "@/lib/features/games/guessTheLetterGame/guessgame.slice";
+import StyledInput from "@/lib/components/StyledInput";
+import StyledButton from "@/lib/components/StyledButton";
 
 const UserNameForm = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -27,7 +29,7 @@ const UserNameForm = () => {
 
     if (!nameRegex.test(userInput)) {
       inputRef.current.setCustomValidity(
-        "Please enter a valid first name (2-15 letters, no numbers or special characters)",
+        "Please enter a valid first name (2-15 letters, no numbers, spaces or special characters)"
       );
       inputRef.current.reportValidity();
       return;
@@ -36,9 +38,14 @@ const UserNameForm = () => {
     dispatch(setGuessGameUserName(userInput));
     dispatch(disableGuessGameUserNameInput(true));
   };
+  const inputChangeHandler = () => {
+    if (inputRef.current) {
+      inputRef.current.setCustomValidity("");
+    }
+  };
 
   const handlePointerDownEvents = (
-    event: React.PointerEvent<HTMLButtonElement>,
+    event: React.PointerEvent<HTMLButtonElement>
   ) => {
     submitHandler();
   };
@@ -50,16 +57,20 @@ const UserNameForm = () => {
         submitHandler();
       }}
     >
-      <label htmlFor={"guess-game-user-name"}>User Name</label>
-      <input
-        ref={inputRef}
+      <StyledInput
         id={"guess-game-user-name"}
-        placeholder={"Enter your name"}
+        label={"User Name"}
         disabled={inputDisabled}
+        ref={inputRef}
+        onChange={inputChangeHandler}
       />
-      <button onPointerDown={handlePointerDownEvents} disabled={inputDisabled}>
-        Submit
-      </button>
+      <StyledButton
+        disabled={inputDisabled}
+        className={styles.button}
+        onPointerDown={handlePointerDownEvents}
+      >
+        Done
+      </StyledButton>
     </form>
   );
 };
