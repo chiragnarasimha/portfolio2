@@ -7,8 +7,8 @@
   outline: none;
   transition: background-color 0.5s ease;
   -webkit-tap-highlight-color: transparent;
-  font-size: var(--text-p-fs);
-  min-height: 3.8rem;
+  font-size: var(--text-p-font-size);
+  min-height: var(--form-element-height);
   padding: 0 2rem;
 }
 
@@ -17,23 +17,23 @@
 }
 
 .primary {
-  background-color: var(--flamingo);
-  color: var(--mantle);
+  background-color: var(--blue);
+  color: var(--base);
   /* color: var(); */
 }
 .primary:hover,
 .primary:active {
-  background-color: var(--rosewater);
+  background-color: var(--sapphire);
 }
 
 /* Ensure active state is visible on touch devices */
 @media (hover: none) and (pointer: coarse) {
   .primary:hover {
-    background-color: var(--flamingo);
+    background-color: var(--blue);
   }
 
   .primary:active {
-    background-color: var(--rosewater);
+    background-color: var(--sapphire);
     transition: background-color 0.5s ease;
   }
 }

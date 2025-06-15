@@ -65,7 +65,7 @@ const UserNameForm = () => {
     >
       <StyledInput
         id={"guess-game-user-name"}
-        label={"User Name"}
+        label={"Please Enter Name"}
         disabled={inputDisabled}
         ref={inputRef}
         onChange={inputChangeHandler}

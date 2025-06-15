@@ -1,0 +1,19 @@
+.container {
+  height: var(--navbar-height);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  max-height: 3rem;
+  stroke: var(--flamingo);
+  fill: var(--flamingo);
+}

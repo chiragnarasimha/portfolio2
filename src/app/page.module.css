@@ -1,0 +1,10 @@
+.container {
+  margin-top: calc(var(--navbar-height) + 3rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /*  TODO: Delete this later */
+  min-height: 200rem;
+  /*  TODO: Delete End */
+}
