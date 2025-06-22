@@ -12,8 +12,36 @@
   align-items: center;
 }
 
+.item {
+  max-height: var(--navbar-item-height);
+}
+
+@keyframes logoGradient {
+  0%,
+  100% {
+    fill: var(--yellow);
+    stroke: var(--yellow);
+    filter: drop-shadow(0 0 2px var(--yellow));
+  }
+  12.5%,
+  87.5% {
+    fill: var(--peach);
+    stroke: var(--peach);
+    filter: drop-shadow(0 0 2px var(--peach));
+  }
+  25%,
+  75% {
+    fill: var(--maroon);
+    stroke: var(--maroon);
+    filter: drop-shadow(0 0 2px var(--maroon));
+  }
+  50% {
+    fill: var(--mauve);
+    stroke: var(--mauve);
+    filter: drop-shadow(0 0 2px var(--pink));
+  }
+}
+
 .logo {
-  max-height: 3rem;
-  stroke: var(--flamingo);
-  fill: var(--flamingo);
+  animation: logoGradient 8s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }

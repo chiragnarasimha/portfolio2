@@ -65,6 +65,7 @@
 
   /* Navbar related variables */
   --navbar-height: 5rem;
+  --navbar-item-height: 3rem;
 
   /* Game Related Variables */
   --game-width: 350px;
