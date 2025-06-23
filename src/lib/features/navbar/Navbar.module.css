@@ -2,18 +2,18 @@
   height: var(--navbar-height);
   position: fixed;
   top: 0;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
   z-index: 1000;
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  padding: 0 1rem;
 }
 
 .item {
-  max-height: var(--navbar-item-height);
+  height: var(--navbar-item-height);
+  /*flex-grow: 1;*/
 }
 
 @keyframes logoGradient {
@@ -44,4 +44,5 @@
 
 .logo {
   animation: logoGradient 8s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  /*flex-grow: 2;*/
 }

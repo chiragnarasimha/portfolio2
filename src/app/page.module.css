@@ -1,4 +1,4 @@
-.container {
+.pageContainer {
   margin-top: calc(var(--navbar-height) + 3rem);
   display: flex;
   flex-direction: column;

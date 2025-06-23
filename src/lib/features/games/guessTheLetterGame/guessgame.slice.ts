@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "@/lib/store";
 
-interface GuessGameState {
+type GuessGameState = {
   userName: string;
   highScore: number;
   userInputDisabled: boolean;
-}
+};
 
 const initialState: GuessGameState = {
   highScore: 0,

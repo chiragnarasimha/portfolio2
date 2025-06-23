@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Navbar.module.css";
 import { ChiragLogo } from "@/lib/assets/images/SvgComponents";
-import DarkModeToggle from "@/lib/features/darkmode/DarkModeToggle";
+import DarkModeToggle from "@/lib/features/navbar/darkmode/DarkModeToggle";
 import NavMenuButton from "@/lib/features/navbar/NavMenuButton";
 
 const Navbar = () => {
@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className={styles.container}>
       <DarkModeToggle className={styles.item} />
       <ChiragLogo className={`${styles.item} ${styles.logo}`} />
-      <NavMenuButton />
+      <NavMenuButton className={styles.item} />
     </nav>
   );
 };

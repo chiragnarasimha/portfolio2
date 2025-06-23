@@ -1,8 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 
-const NavMenuButton = () => {
+type Props = {
+  className: string;
+};
+const NavMenuButton: FC<Props> = ({ className }) => {
   return (
-    <div>
+    <div className={className}>
       <input type={"checkbox"} />
     </div>
   );
