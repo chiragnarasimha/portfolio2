@@ -64,7 +64,7 @@
   ); /* Element borders: input outlines, card borders, dividers, separator lines, table borders, panel edges */
 
   /* Navbar related variables */
-  --navbar-height: 5rem;
+  --navbar-height: 9rem;
   --navbar-item-height: 3rem;
 
   /* Game Related Variables */

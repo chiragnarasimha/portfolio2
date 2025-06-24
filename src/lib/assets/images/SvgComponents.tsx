@@ -7,7 +7,6 @@ type Props = {
 export const ChiragLogo: FC<Props> = ({ className }) => {
   return (
     <svg
-      width="425"
       height="104"
       viewBox="0 0 425 104"
       fill="none"

@@ -5,10 +5,12 @@
   opacity: 0;
 }
 .labelContainer {
+  display: flex;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
 }
 .iconContainer {
   display: flex;
-  /*align-items: center;*/
   width: 8rem;
   border: var(--form-element-border);
   border-radius: 2rem;
@@ -21,11 +23,15 @@
   fill: var(--yellow);
   stroke: var(--yellow);
   opacity: 1;
+  transition: all 0.2s cubic-bezier(0.66, 0, 0.34, 1);
+  transform: translateX(0);
 }
 .moonIcon {
   fill: var(--mauve);
   stroke: var(--mauve);
   opacity: 0;
+  transform: translateX(3rem);
+  transition: all 0.2s cubic-bezier(0.66, 0, 0.34, 1);
 }
 .toggleContainer {
   position: absolute;
@@ -34,7 +40,7 @@
   display: flex;
 }
 .toggle {
-  transition: all 0.2s;
+  transition: all 0.2s cubic-bezier(0.66, 0, 0.34, 1);
   width: 2rem;
   height: 2rem;
   border-radius: 10rem;
@@ -46,7 +52,9 @@
 }
 .checkbox:checked ~ .iconContainer .sunIcon {
   opacity: 0;
+  transform: translateX(-3rem);
 }
 .checkbox:checked ~ .iconContainer .moonIcon {
   opacity: 1;
+  transform: translateX(0);
 }

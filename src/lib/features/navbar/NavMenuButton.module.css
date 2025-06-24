@@ -1,0 +1,56 @@
+.labelContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 4rem;
+  -webkit-tap-highlight-color: transparent;
+}
+.input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.svg {
+  height: calc(var(--navbar-item-height) + 1rem);
+}
+
+.line {
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke: var(--text);
+  transition: all 500ms;
+}
+
+.top {
+  transform-origin: 26px 40px;
+}
+
+.middle {
+  stroke-dasharray: 60 60;
+}
+
+.bottom {
+  transform-origin: 26px 60px;
+}
+
+.input:checked ~ .svg .line {
+  stroke: var(--red);
+}
+
+.input:checked ~ .svg .top {
+  transform: rotate(45deg);
+}
+
+.input:checked ~ .svg .middle {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+}
+
+.input:checked ~ .svg .bottom {
+  transform: rotate(-45deg);
+}

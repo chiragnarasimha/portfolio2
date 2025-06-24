@@ -28,12 +28,14 @@ const DarkModeToggle: FC<Props> = ({ className }) => {
 
   return (
     <>
-      <label>
+      <label htmlFor="dark-mode-toggle" className={styles.labelContainer}>
         <input
           className={`${styles.checkbox}`}
           type={"checkbox"}
           checked={isDarkMode}
           onChange={() => setIsDarkMode(!isDarkMode)}
+          id="dark-mode-toggle"
+          aria-label="Toggle dark mode"
         />
         <div className={`${styles.iconContainer} ${className}`}>
           <MoonIcon className={styles.moonIcon} />
