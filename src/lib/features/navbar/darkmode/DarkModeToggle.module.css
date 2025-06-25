@@ -18,20 +18,19 @@
   justify-content: space-between;
   position: relative;
 }
-
 .sunIcon {
   fill: var(--yellow);
   stroke: var(--yellow);
   opacity: 1;
-  transition: all 0.2s cubic-bezier(0.66, 0, 0.34, 1);
+  transition: all 1s var(--bounce);
   transform: translateX(0);
 }
 .moonIcon {
   fill: var(--mauve);
   stroke: var(--mauve);
   opacity: 0;
-  transform: translateX(3rem);
-  transition: all 0.2s cubic-bezier(0.66, 0, 0.34, 1);
+  transform: translateX(2rem);
+  transition: all 1s var(--bounce);
 }
 .toggleContainer {
   position: absolute;
@@ -40,7 +39,7 @@
   display: flex;
 }
 .toggle {
-  transition: all 0.2s cubic-bezier(0.66, 0, 0.34, 1);
+  transition: all 1s var(--bounce);
   width: 2rem;
   height: 2rem;
   border-radius: 10rem;
@@ -52,7 +51,7 @@
 }
 .checkbox:checked ~ .iconContainer .sunIcon {
   opacity: 0;
-  transform: translateX(-3rem);
+  transform: translateX(-2rem);
 }
 .checkbox:checked ~ .iconContainer .moonIcon {
   opacity: 1;
