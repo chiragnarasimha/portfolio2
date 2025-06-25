@@ -6,7 +6,7 @@ import {
   disableGuessGameUserNameInput,
   selectGuessGameInputDisabled,
   setGuessGameUserName,
-} from "@/lib/features/games/guessTheLetterGame/guessgame.slice";
+} from "@/lib/features/games/guessTheLetterGame/GuessGame.slice";
 import StyledInput from "@/lib/components/StyledInput";
 import StyledButton from "@/lib/components/StyledButton";
 
