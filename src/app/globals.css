@@ -49,6 +49,7 @@
   --overlay0: hsl(228, 11%, 65%);
   /* Light overlays: disabled element backgrounds, inactive tab content, skeleton loading states, subtle hover effects */
   --surface2: hsl(227, 12%, 71%);
+  --surface2-transparent: hsla(227, 12%, 71%, 0.1); /* This is for cards */
   /* Elevated surfaces: raised cards, floating panels, sidebar sections, dashboard widgets, elevated navigation bars */
   --surface1: hsl(225, 14%, 77%);
   /* Primary surfaces: main cards, content containers, input field backgrounds, table rows, comment sections, article backgrounds */
@@ -158,9 +159,10 @@
   --subtext1: hsl(227, 44%, 80%);
   --subtext0: hsl(228, 29%, 73%);
   --overlay2: hsl(228, 22%, 66%);
-  --overlay1: #838ba7;
+  --overlay1: hsl(227, 17%, 58%);
   --overlay0: hsl(229, 13%, 52%);
   --surface2: hsl(228, 13%, 44%);
+  --surface2-transparent: hsla(228, 13%, 44%, 0.1);
   --surface1: hsl(227, 15%, 37%);
   --surface0: hsl(230, 16%, 30%);
   --base: hsl(229, 19%, 23%);
