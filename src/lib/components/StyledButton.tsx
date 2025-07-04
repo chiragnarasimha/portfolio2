@@ -27,7 +27,7 @@ const StyledButton = forwardRef<HTMLButtonElement, Props>(
         type={type}
         disabled={disabled}
         onPointerDown={onPointerDown}
-        className={`${styles.button} ${styles[variant]} ${className}`}
+        className={`${styles.button} ${styles[variant]} ${className} ${disabled && "element-disabled"}`}
       >
         {children}
       </button>

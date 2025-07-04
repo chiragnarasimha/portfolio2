@@ -16,19 +16,17 @@
   cursor: pointer;
 }
 
-.button:disabled {
-  cursor: not-allowed;
-  background-color: var(--overlay0);
-}
+.button:disabled,
 .button:disabled:hover {
+  cursor: not-allowed;
   background-color: var(--overlay0);
 }
 
 .primary {
-  background-color: var(--blue);
+  background-color: var(--flamingo);
   color: var(--base);
 }
 .primary:hover,
 .primary:active {
-  background-color: var(--sapphire);
+  background-color: var(--rosewater);
 }

@@ -2,86 +2,72 @@
 
 :root {
   /* Catppuccin Latte (Light Theme) */
-
-  /* Accent Colors - Use for highlights, decorative elements, and brand accents */
   --rosewater: hsl(11, 59%, 67%);
-  /* Subtle highlights: progress bar fills, warm button hover states, notification dots, profile picture borders, social media icons, testimonial cards, pricing badges */
   --flamingo: hsl(0, 60%, 67%);
-  /* Secondary links: breadcrumb links, tag links, category labels, footer links, sidebar navigation, icon buttons, decorative borders around images */
   --pink: hsl(316, 73%, 69%);
-  /* Call-to-action: signup buttons, "New" badges, promotional banners, heart/like icons, special offers, female-targeted UI elements, playful animations */
   --mauve: hsl(266, 85%, 58%);
-  /* Premium features: pro badges, VIP indicators, special notifications, featured content borders, premium plan highlights, exclusive content markers */
   --red: hsl(347, 87%, 44%);
-  /* Error states: form validation errors, delete confirmation buttons, critical alerts, 404 pages, error icons, required field indicators, danger zones */
   --maroon: hsl(355, 76%, 59%);
-  /* Warning states: destructive action confirmations, unsaved changes alerts, account suspension notices, password strength warnings, data loss warnings */
   --peach: hsl(22, 99%, 52%);
-  /* Success states: form submission success, purchase confirmations, upload complete indicators, achievement badges, positive feedback messages */
   --yellow: hsl(35, 77%, 49%);
-  /* Caution states: pending approval notices, draft indicators, trial expiration warnings, maintenance alerts, incomplete profile warnings */
   --green: hsl(109, 58%, 40%);
-  /* Success messages: successful saves, payment confirmations, account verification, online status indicators, growth metrics, eco-friendly badges */
   --teal: hsl(183, 74%, 35%);
-  /* Info states: help tooltips, informational callouts, neutral status indicators, secondary action buttons, educational content highlights */
   --sky: hsl(197, 97%, 46%);
-  /* Information: help documentation links, information modals, tutorial highlights, FAQ sections, support chat bubbles, learning resources */
   --sapphire: hsl(189, 70%, 42%);
-  /* Interactive hover: primary button hover states, active navigation items, selected menu items, focused form fields, interactive card hovers */
   --blue: hsl(220, 91%, 54%);
-  /* Primary elements: main CTA buttons, primary links, logo colors, brand elements, submit buttons, active tabs, focus outlines, hyperlinks */
   --lavender: hsl(231, 97%, 72%);
-  /* Subtle accents: decorative elements, soft highlights, secondary badges, gentle animations, background patterns, disabled button states */
 
-  /* Text Colors - Use for typography hierarchy and readability */
   --text: hsl(234, 16%, 35%);
-  /* Primary text: main headings (h1-h3), body paragraphs, article content, navigation labels, button text, form labels, card titles */
   --subtext1: hsl(233, 13%, 41%);
-  /* Secondary text: subheadings (h4-h6), captions, metadata, bylines, timestamps, secondary navigation, help text, descriptions */
   --subtext0: hsl(233, 10%, 47%);
-  /* Tertiary text: placeholders, disabled text, fine print, legal disclaimers, input hints, inactive menu items, copyright notices */
 
-  /* Layer Colors - Use for UI depth and hierarchy */
   --overlay2: hsl(232, 10%, 53%);
-  /* Heavy overlays: modal backgrounds, image overlays, loading screens, dropdown shadows, popup backgrounds, toast notifications */
   --overlay1: hsl(231, 10%, 59%);
-  /* Medium overlays: hover states for cards, secondary modal layers, tooltip backgrounds, dropdown item hover states */
   --overlay0: hsl(228, 11%, 65%);
-  /* Light overlays: disabled element backgrounds, inactive tab content, skeleton loading states, subtle hover effects */
   --surface2: hsl(227, 12%, 71%);
-  --surface2-transparent: hsla(227, 12%, 71%, 0.05); /* This is for cards */
-  /* Elevated surfaces: raised cards, floating panels, sidebar sections, dashboard widgets, elevated navigation bars */
   --surface1: hsl(225, 14%, 77%);
-  /* Primary surfaces: main cards, content containers, input field backgrounds, table rows, comment sections, article backgrounds */
   --surface0: hsl(223, 16%, 83%);
-  /* Base surfaces: form fields, text areas, code blocks, search bars, filter panels, settings sections, content wells */
 
-  /* Background Colors - Use for main layout and containers */
   --base: hsl(220, 23%, 95%);
-  /* Main backgrounds: page background, main content areas, app background, document background, primary workspace */
   --mantle: #e6e9ef;
-  /* Secondary backgrounds: sidebar backgrounds, navigation panels, secondary content areas, dashboard sections, menu backgrounds */
   --crust: hsl(220, 21%, 89%);
-  /* Border backgrounds: header backgrounds, footer backgrounds, separator sections, toolbar backgrounds, status bar backgrounds */
+}
 
-  /* Theme mappings for light mode - Semantic color assignments */
-  --background: var(--base);
-  /* Page background: main content areas, app background, document canvas, workspace background */
-  --foreground: var(--text);
-  /* Primary text: main content text, headings, navigation labels, button text, form labels */
-  --surface: var(--surface0);
-  /* Card backgrounds: input fields, content containers, form panels, comment sections, article backgrounds */
-  --overlay: var(--overlay0);
-  /* Modal overlays: tooltip backgrounds, dropdown menus, popup backgrounds, loading overlays, notification panels */
-  --accent: var(--blue);
-  /* Primary interactive: main CTA buttons, primary links, brand elements, focus rings, active states, submit buttons */
-  --accent-hover: var(--sapphire);
-  /* Hover states: primary button hovers, active navigation items, selected elements, focused inputs, interactive highlights */
-  --muted: var(--subtext0);
-  /* Secondary text: placeholders, disabled text, help text, metadata, timestamps, inactive elements */
-  --border: var(--surface1);
-  /* Element borders: input outlines, card borders, dividers, separator lines, table borders, panel edges */
+/*@media (prefers-color-scheme: dark) {*/
+.dark-mode {
+  /* Catppuccin Frappe (Dark Theme) */
+  --rosewater: hsl(10, 57%, 88%);
+  --flamingo: hsl(0, 59%, 84%);
+  --pink: hsl(316, 73%, 84%);
+  --mauve: hsl(277, 59%, 76%);
+  --red: hsl(359, 68%, 71%);
+  --maroon: hsl(358, 66%, 76%);
+  --peach: hsl(20, 79%, 70%);
+  --yellow: hsl(40, 62%, 73%);
+  --green: hsl(96, 44%, 68%);
+  --teal: hsl(172, 39%, 65%);
+  --sky: hsl(189, 48%, 73%);
+  --sapphire: hsl(199, 55%, 69%);
+  --blue: hsl(222, 74%, 74%);
+  --lavender: hsl(239, 66%, 84%);
+  --text: hsl(227, 70%, 87%);
+  --subtext1: hsl(227, 44%, 80%);
+  --subtext0: hsl(228, 29%, 73%);
+  --overlay2: hsl(228, 22%, 66%);
+  --overlay1: hsl(227, 17%, 58%);
+  --overlay0: hsl(229, 13%, 52%);
+  --surface2: hsl(228, 13%, 44%);
+  --surface2-transparent: hsla(228, 13%, 44%, 0.1);
+  --surface1: hsl(227, 15%, 37%);
+  --surface0: hsl(230, 16%, 30%);
+  --base: hsl(229, 19%, 23%);
+  --mantle: hsl(231, 19%, 20%);
+  --crust: hsl(229, 20%, 17%);
+}
 
+/* App related Variables*/
+:root,
+.dark-mode {
   /* Navbar related variables */
   --navbar-height: 9rem;
   --navbar-item-height: 3rem;
@@ -138,42 +124,16 @@
   );
 }
 
-/*@media (prefers-color-scheme: dark) {*/
-.dark-mode {
-  /* Catppuccin Frappe (Dark Theme) */
-  --rosewater: hsl(10, 57%, 88%);
-  --flamingo: hsl(0, 59%, 84%);
-  --pink: hsl(316, 73%, 84%);
-  --mauve: hsl(277, 59%, 76%);
-  --red: hsl(359, 68%, 71%);
-  --maroon: hsl(358, 66%, 76%);
-  --peach: hsl(20, 79%, 70%);
-  --yellow: hsl(40, 62%, 73%);
-  --green: hsl(96, 44%, 68%);
-  --teal: hsl(172, 39%, 65%);
-  --sky: hsl(189, 48%, 73%);
-  --sapphire: hsl(199, 55%, 69%);
-  --blue: hsl(222, 74%, 74%);
-  --lavender: hsl(239, 66%, 84%);
-  --text: hsl(227, 70%, 87%);
-  --subtext1: hsl(227, 44%, 80%);
-  --subtext0: hsl(228, 29%, 73%);
-  --overlay2: hsl(228, 22%, 66%);
-  --overlay1: hsl(227, 17%, 58%);
-  --overlay0: hsl(229, 13%, 52%);
-  --surface2: hsl(228, 13%, 44%);
-  --surface2-transparent: hsla(228, 13%, 44%, 0.1);
-  --surface1: hsl(227, 15%, 37%);
-  --surface0: hsl(230, 16%, 30%);
-  --base: hsl(229, 19%, 23%);
-  --mantle: hsl(231, 19%, 20%);
-  --crust: hsl(229, 20%, 17%);
-}
-
 .glass-effect {
   background-color: var(--surface2-transparent);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
+}
+
+.element-disabled,
+.element-disabled:hover {
+  cursor: not-allowed;
+  background-color: var(--overlay0);
 }
 
 html {
