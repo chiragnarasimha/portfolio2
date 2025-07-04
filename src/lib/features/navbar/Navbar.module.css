@@ -6,6 +6,7 @@
   grid-template-columns: 1fr 2fr 1fr;
   justify-items: center;
   align-items: center;
+  background: var(--surface2);
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
   z-index: 1000;
