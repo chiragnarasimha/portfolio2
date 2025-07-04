@@ -12,7 +12,7 @@ import StyledButton from "@/lib/components/StyledButton";
 
 const triggerValidationFeedback = (
   inputRef: React.RefObject<HTMLInputElement | null>,
-  message: string,
+  message: string
 ) => {
   const field = inputRef.current;
   if (field) {
@@ -41,7 +41,7 @@ const UserNameForm = () => {
     if (!nameRegex.test(userInput)) {
       triggerValidationFeedback(
         inputRef,
-        "Please enter a valid first name (2-15 letters, no numbers, spaces or special characters)",
+        "Please enter a valid first name (2-15 letters, no numbers, spaces or special characters)"
       );
       return;
     }
