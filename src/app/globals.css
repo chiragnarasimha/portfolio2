@@ -49,7 +49,7 @@
   --overlay0: hsl(228, 11%, 65%);
   /* Light overlays: disabled element backgrounds, inactive tab content, skeleton loading states, subtle hover effects */
   --surface2: hsl(227, 12%, 71%);
-  --surface2-transparent: hsla(227, 12%, 71%, 0.1); /* This is for cards */
+  --surface2-transparent: hsla(227, 12%, 71%, 0.05); /* This is for cards */
   /* Elevated surfaces: raised cards, floating panels, sidebar sections, dashboard widgets, elevated navigation bars */
   --surface1: hsl(225, 14%, 77%);
   /* Primary surfaces: main cards, content containers, input field backgrounds, table rows, comment sections, article backgrounds */
@@ -168,6 +168,12 @@
   --base: hsl(229, 19%, 23%);
   --mantle: hsl(231, 19%, 20%);
   --crust: hsl(229, 20%, 17%);
+}
+
+.glass-effect {
+  background-color: var(--surface2-transparent);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 
 html {

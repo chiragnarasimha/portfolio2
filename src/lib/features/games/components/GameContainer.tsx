@@ -8,7 +8,7 @@ type Props = {
 };
 const GameContainer: React.FC<Props> = ({ children, id, className }) => {
   return (
-    <section id={id} className={`${styles.section} ${className}`}>
+    <section id={id} className={`${styles.section} glass-effect ${className}`}>
       {children}
     </section>
   );

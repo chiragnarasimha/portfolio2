@@ -6,7 +6,7 @@ import NavMenuButton from "@/lib/features/navbar/menu/NavMenuButton";
 
 const Navbar = () => {
   return (
-    <nav className={styles.container}>
+    <nav className={`${styles.container} glass-effect`}>
       <DarkModeToggle className={styles.item} />
       <ChiragLogo className={`${styles.item} ${styles.logo}`} />
       <NavMenuButton className={styles.item} />
