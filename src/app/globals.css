@@ -69,7 +69,7 @@
 :root,
 .dark-mode {
   /* Navbar related variables */
-  --navbar-height: 9rem;
+  --navbar-height: 7rem;
   --navbar-item-height: 3rem;
 
   /* Game Related Variables */
@@ -167,6 +167,6 @@ a {
 
 @media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark; /* Enable dark mode scrollbars and system colors when user prefers dark theme*/
+    color-scheme: dark; /* Enable dark mode scrollbar and system colors when user prefers dark theme*/
   }
 }

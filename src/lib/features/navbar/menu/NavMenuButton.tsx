@@ -10,7 +10,12 @@ const NavMenuButton: FC<Props> = ({ className }) => {
       htmlFor={"hamburger-icon"}
       className={`${styles.labelContainer} ${className}`}
     >
-      <input type={"checkbox"} id={"hamburger-icon"} className={styles.input} />
+      <input
+        type={"checkbox"}
+        id={"hamburger-icon"}
+        className={styles.input}
+        aria-label="Menu toggle button"
+      />
       <svg viewBox="0 0 100 100" className={styles.svg}>
         <path className={`${styles.line} ${styles.top}`} d="M 20,30 H 80" />
         <path className={`${styles.line} ${styles.middle}`} d="M 20,50 H 80" />

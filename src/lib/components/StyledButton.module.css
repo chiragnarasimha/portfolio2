@@ -10,6 +10,7 @@
   font-size: var(--text-p-font-size);
   min-height: var(--form-element-height);
   padding: 0 2rem;
+  color: var(--base);
 }
 
 .button:hover {
@@ -23,10 +24,16 @@
 }
 
 .primary {
-  background-color: var(--flamingo);
-  color: var(--base);
+  background-color: var(--blue);
 }
 .primary:hover,
 .primary:active {
-  background-color: var(--rosewater);
+  background-color: var(--sapphire);
+}
+.cancel {
+  background-color: var(--red);
+}
+.cancel:hover,
+.cancel:active {
+  background-color: var(--maroon);
 }

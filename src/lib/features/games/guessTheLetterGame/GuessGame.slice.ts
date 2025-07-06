@@ -35,6 +35,9 @@ export const selectGuessGameHighScore = (state: RootState) =>
 export const selectGuessGameInputDisabled = (state: RootState) =>
   state.guessGame.userInputDisabled;
 
+export const selectGuessGameUserName = (state: RootState) =>
+  state.guessGame.userName;
+
 export const {
   setGuessGameHighScore,
   setGuessGameUserName,

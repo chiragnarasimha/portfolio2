@@ -1,6 +1,12 @@
 .form {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  overflow: hidden;
+  transition: all 1s;
+}
+.input {
+  grid-column: span 2;
 }
 
 .title {
@@ -8,12 +14,19 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  padding: 1rem 0;
 }
 
 .button {
-  width: min-content;
-  height: 42%;
   align-self: flex-end;
-  font-size: small;
+}
+
+.collapsed {
+  max-height: 0;
+}
+
+.icon {
+  stroke: var(--base);
+
+  width: 3rem;
 }

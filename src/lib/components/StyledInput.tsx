@@ -1,5 +1,6 @@
 import React, { ForwardedRef, forwardRef } from "react";
 import styles from "./StyledInput.module.css";
+import clsx from "clsx";
 
 type Props = {
   id: string;
@@ -22,11 +23,12 @@ const StyledInput = forwardRef<HTMLInputElement, Props>(
       placeholder,
       disabled,
       onChange,
+      className,
     },
     ref: ForwardedRef<HTMLInputElement>
   ) => {
     return (
-      <div className={styles.container}>
+      <div className={clsx(styles.container, className)}>
         <label htmlFor={id} className={`${styles.label} ${labelClassName}`}>
           {label}
         </label>

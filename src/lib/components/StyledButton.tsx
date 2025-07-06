@@ -2,7 +2,7 @@ import React, { ForwardedRef, forwardRef } from "react";
 import styles from "./StyledButton.module.css";
 type Props = {
   children: React.ReactNode;
-  variant: "primary" | "secondary" | "outline";
+  variant: "primary" | "secondary" | "outline" | "cancel";
   disabled?: boolean;
   className?: string;
   onPointerDown?: React.PointerEventHandler<HTMLButtonElement>;
