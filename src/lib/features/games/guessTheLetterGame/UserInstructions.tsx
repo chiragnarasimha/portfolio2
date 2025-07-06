@@ -1,5 +1,4 @@
 "use client";
-import React, { useState, useEffect, useMemo, useCallback } from "react";
 import styles from "./UserInstructions.module.css";
 import { useAppSelector } from "@/lib/hooks";
 import {
