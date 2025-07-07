@@ -5,12 +5,14 @@ type GuessGameState = {
   userName: string;
   highScore: number;
   userInputDisabled: boolean;
+  instructionsComplete: boolean;
 };
 
 const initialState: GuessGameState = {
   highScore: 0,
   userName: "",
   userInputDisabled: false,
+  instructionsComplete: false,
 };
 
 const guessGameSlice = createSlice({
@@ -26,6 +28,9 @@ const guessGameSlice = createSlice({
     disableGuessGameUserNameInput(state, action: PayloadAction<boolean>) {
       state.userInputDisabled = action.payload;
     },
+    setInstructionsComplete(state, action: PayloadAction<boolean>) {
+      state.instructionsComplete = action.payload;
+    },
   },
 });
 
@@ -38,9 +43,13 @@ export const selectGuessGameInputDisabled = (state: RootState) =>
 export const selectGuessGameUserName = (state: RootState) =>
   state.guessGame.userName;
 
+export const selectInstructionsComplete = (state: RootState) =>
+  state.guessGame.instructionsComplete;
+
 export const {
   setGuessGameHighScore,
   setGuessGameUserName,
   disableGuessGameUserNameInput,
+  setInstructionsComplete,
 } = guessGameSlice.actions;
 export default guessGameSlice.reducer;

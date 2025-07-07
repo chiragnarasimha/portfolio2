@@ -1,0 +1,13 @@
+.container {
+  font-size: var(--text-p-font-size);
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.expanded {
+  max-height: 1000px;
+}

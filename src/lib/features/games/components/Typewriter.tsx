@@ -22,32 +22,34 @@ const Typewriter: React.FC<TypewriterTextProps> = ({
   const typeText = useCallback(() => {
     if (!textRef.current || !cursorRef.current) return;
 
-    let currentIndex = 0;
     const textElement = textRef.current;
     const cursorElement = cursorRef.current;
 
     // Clear any existing content
     textElement.textContent = "";
 
-    const typeNextCharacter = () => {
-      if (currentIndex < text.length) {
-        textElement.textContent += text[currentIndex];
-        currentIndex++;
-
-        timeoutRef.current = setTimeout(typeNextCharacter, speed);
-      } else {
-        // Hide cursor when done
-        cursorElement.style.display = "none";
-        if (onComplete) {
-          onComplete();
-        }
-      }
-    };
-
     // Show cursor and start typing
     cursorElement.style.display = "inline";
-    typeNextCharacter();
-  }, [text, speed, onComplete]);
+
+    // Type each character with delay using a for loop
+    for (let i = 0; i < text.length; i++) {
+      timeoutRef.current = setTimeout(() => {
+        if (!textRef.current) return; // Check if component is still mounted
+
+        textElement.textContent += text[i];
+
+        // Hide cursor and call onComplete when done
+        if (i === text.length - 1) {
+          if (cursorRef.current) {
+            cursorRef.current.style.display = "none";
+          }
+          if (onComplete) {
+            onComplete();
+          }
+        }
+      }, i * speed);
+    }
+  }, [onComplete, text, speed]);
 
   useEffect(() => {
     // Clear any existing timeouts
@@ -57,7 +59,6 @@ const Typewriter: React.FC<TypewriterTextProps> = ({
 
     // Start typing animation
     typeText();
-
     // Cleanup function
     return () => {
       if (timeoutRef.current) {
