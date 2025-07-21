@@ -6,6 +6,9 @@ type Props = {
   id: string;
   className?: string;
 };
+/**
+ * This container is for games
+ */
 const GameContainer: React.FC<Props> = ({ children, id, className }) => {
   return (
     <section id={id} className={`${styles.section} glass-effect ${className}`}>

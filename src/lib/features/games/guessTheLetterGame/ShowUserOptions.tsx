@@ -1,22 +1,15 @@
 "use client";
-import React from "react";
-import styles from "./ShowUserOptions.module.css";
 import { useAppSelector } from "@/lib/hooks";
-import {
-  selectGuessGameInputDisabled,
-  selectGuessGameUserName,
-  selectInstructionsComplete,
-} from "./GuessGame.slice";
 import clsx from "clsx";
+import { selectGuessGameState } from "./GuessGame.slice";
+import styles from "./ShowUserOptions.module.css";
 
 const ShowUserOptions = () => {
-  const isInstructionsComplete = useAppSelector(selectInstructionsComplete);
+  const guessGameState = useAppSelector(selectGuessGameState);
+  const { isInstructionsComplete, userName, isUserNameInputDisabled } =
+    guessGameState;
 
-  const name = useAppSelector(selectGuessGameUserName)
-    .toLocaleUpperCase()
-    .split("");
-
-  if (!useAppSelector(selectGuessGameInputDisabled)) return;
+  if (!isUserNameInputDisabled) return;
 
   return (
     <div
@@ -24,11 +17,14 @@ const ShowUserOptions = () => {
         [styles.expanded]: isInstructionsComplete,
       })}
     >
-      {name.map((text, index) => (
-        <span key={index}>
-          {index + 1}: {text}
-        </span>
-      ))}
+      {userName
+        .toLocaleUpperCase()
+        .split("")
+        .map((char, index) => (
+          <span key={`${index} ${char}`}>
+            {index + 1}: {char}
+          </span>
+        ))}
     </div>
   );
 };

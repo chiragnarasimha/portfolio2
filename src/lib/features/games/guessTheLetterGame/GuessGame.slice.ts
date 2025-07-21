@@ -4,15 +4,17 @@ import { RootState } from "@/lib/store";
 type GuessGameState = {
   userName: string;
   highScore: number;
-  userInputDisabled: boolean;
-  instructionsComplete: boolean;
+  isUserNameInputDisabled: boolean;
+  isInstructionsComplete: boolean;
+  correctGuess: number;
 };
 
 const initialState: GuessGameState = {
   highScore: 0,
   userName: "",
-  userInputDisabled: false,
-  instructionsComplete: false,
+  isUserNameInputDisabled: false,
+  isInstructionsComplete: false,
+  correctGuess: 0,
 };
 
 const guessGameSlice = createSlice({
@@ -24,27 +26,24 @@ const guessGameSlice = createSlice({
     },
     setGuessGameUserName(state, action: PayloadAction<string>) {
       state.userName = action.payload;
+      state.correctGuess =
+        Math.floor(Math.random() * action.payload.length) + 1;
     },
     disableGuessGameUserNameInput(state, action: PayloadAction<boolean>) {
-      state.userInputDisabled = action.payload;
+      state.isUserNameInputDisabled = action.payload;
     },
     setInstructionsComplete(state, action: PayloadAction<boolean>) {
-      state.instructionsComplete = action.payload;
+      state.isInstructionsComplete = action.payload;
     },
   },
 });
 
-export const selectGuessGameHighScore = (state: RootState) =>
-  state.guessGame.highScore;
-
-export const selectGuessGameInputDisabled = (state: RootState) =>
-  state.guessGame.userInputDisabled;
-
-export const selectGuessGameUserName = (state: RootState) =>
+export const selectGuessGameState = (state: RootState): GuessGameState =>
+  state.guessGame;
+export const selectGuessGameInputDisabled = (state: RootState): boolean =>
+  state.guessGame.isUserNameInputDisabled;
+export const selectGuessGameUserName = (state: RootState): string =>
   state.guessGame.userName;
-
-export const selectInstructionsComplete = (state: RootState) =>
-  state.guessGame.instructionsComplete;
 
 export const {
   setGuessGameHighScore,

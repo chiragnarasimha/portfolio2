@@ -1,14 +1,14 @@
 "use client";
-import styles from "./UserInstructions.module.css";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import clsx from "clsx";
+import { useEffect } from "react";
+import Typewriter from "../components/Typewriter";
 import {
   selectGuessGameInputDisabled,
   selectGuessGameUserName,
   setInstructionsComplete,
 } from "./GuessGame.slice";
-import clsx from "clsx";
-import Typewriter from "../components/Typewriter";
-import { useEffect } from "react";
+import styles from "./UserInstructions.module.css";
 
 const UserInstructions = () => {
   const isInputDisabled = useAppSelector(selectGuessGameInputDisabled);
@@ -16,7 +16,7 @@ const UserInstructions = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(setInstructionsComplete(false));
-  }, [dispatch]);
+  });
 
   const fullText = `🎯 Hey ${name}! Ready for the challenge? Let's see if you can crack the code in the fewest guesses possible! 🚀
 
@@ -32,6 +32,10 @@ Enter the number associated with the letter you want to guess!`;
       <Typewriter
         text={isInputDisabled ? fullText : ""}
         onComplete={() => dispatch(setInstructionsComplete(true))}
+        speed={
+          // TODO: Delete this after full implementation
+          1
+        }
       />
     </div>
   );

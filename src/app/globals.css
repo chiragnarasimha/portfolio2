@@ -129,7 +129,6 @@
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
 }
-
 .element-disabled,
 .element-disabled:hover {
   cursor: not-allowed;

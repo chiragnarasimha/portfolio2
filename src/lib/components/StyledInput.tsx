@@ -11,6 +11,17 @@ type Props = {
   placeholder?: string;
   disabled?: boolean;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  type?: "number" | "text";
+  inputMode?:
+    | "text"
+    | "search"
+    | "email"
+    | "tel"
+    | "url"
+    | "none"
+    | "numeric"
+    | "decimal"
+    | undefined;
 };
 
 const StyledInput = forwardRef<HTMLInputElement, Props>(
@@ -24,6 +35,8 @@ const StyledInput = forwardRef<HTMLInputElement, Props>(
       disabled,
       onChange,
       className,
+      type = "text",
+      inputMode = "text",
     },
     ref: ForwardedRef<HTMLInputElement>
   ) => {
@@ -39,6 +52,8 @@ const StyledInput = forwardRef<HTMLInputElement, Props>(
           placeholder={placeholder}
           disabled={disabled}
           onChange={onChange}
+          type={type}
+          inputMode={inputMode}
         />
       </div>
     );

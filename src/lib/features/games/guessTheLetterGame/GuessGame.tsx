@@ -1,10 +1,9 @@
-import React from "react";
-
-import styles from "./GuessGame.module.css";
-import UserNameForm from "@/lib/features/games/guessTheLetterGame/UserNameForm";
 import GameContainer from "@/lib/features/games/components/GameContainer";
-import UserInstructions from "./UserInstructions";
+import UserNameForm from "@/lib/features/games/guessTheLetterGame/UserNameForm";
+import styles from "./GuessGame.module.css";
 import ShowUserOptions from "./ShowUserOptions";
+import UserAnswer from "./UserAnswer";
+import UserInstructions from "./UserInstructions";
 
 const GuessGame = () => {
   return (
@@ -13,6 +12,7 @@ const GuessGame = () => {
       <UserNameForm />
       <UserInstructions />
       <ShowUserOptions />
+      <UserAnswer />
     </GameContainer>
   );
 };
