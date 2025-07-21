@@ -32,10 +32,6 @@ Enter the number associated with the letter you want to guess!`;
       <Typewriter
         text={isInputDisabled ? fullText : ""}
         onComplete={() => dispatch(setInstructionsComplete(true))}
-        speed={
-          // TODO: Delete this after full implementation
-          1
-        }
       />
     </div>
   );
