@@ -1,8 +1,8 @@
+import StoreProvider from "@/app/StoreProvider";
+import Navbar from "@/features/navbar/Navbar";
+import StarBackground from "@/lib/components/StarBackground";
 import type { Metadata } from "next";
 import "./globals.css";
-import StoreProvider from "@/app/StoreProvider";
-import Navbar from "@/lib/features/navbar/Navbar";
-import StarBackground from "@/lib/components/StarBackground";
 
 export const metadata: Metadata = {
   title: "Portfolio - CNM",

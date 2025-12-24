@@ -1,5 +1,5 @@
-import GameContainer from "@/lib/features/games/components/GameContainer";
-import UserNameForm from "@/lib/features/games/guessTheLetterGame/UserNameForm";
+import GameContainer from "@/features/games/components/GameContainer";
+import UserNameForm from "@/features/games/guessTheLetterGame/UserNameForm";
 import styles from "./GuessGame.module.css";
 import ShowUserOptions from "./ShowUserOptions";
 import UserAnswer from "./UserAnswer";

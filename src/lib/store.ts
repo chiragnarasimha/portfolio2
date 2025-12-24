@@ -1,5 +1,5 @@
+import guessGame from "@/features/games/guessTheLetterGame/GuessGame.slice";
 import { configureStore } from "@reduxjs/toolkit";
-import guessGame from "@/lib/features/games/guessTheLetterGame/GuessGame.slice";
 
 export const makeStore = () => {
   return configureStore({

@@ -8,18 +8,17 @@ import styles from "./UserAnswer.module.css";
 
 const UserAnswer = () => {
   const guessGameState = useAppSelector(selectGuessGameState);
-  const { isInstructionsComplete, correctGuess, userName } = guessGameState;
+  const { isInstructionsComplete, userName } = guessGameState;
+  const length = userName.length;
   const [score, setScore] = useState(length);
   useEffect(() => {
-    setScore(userName.length);
-  }, [userName]);
+    setScore(length);
+  }, [length, userName]);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setScore(score - 1);
   };
-
-  console.table({ correctGuess, userName });
 
   if (!isInstructionsComplete) return;
 

@@ -1,8 +1,7 @@
-import React from "react";
-import styles from "./Navbar.module.css";
+import DarkModeToggle from "@/features/navbar/darkmode/DarkModeToggle";
+import NavMenuButton from "@/features/navbar/menu/NavMenuButton";
 import { ChiragLogo } from "@/lib/assets/images/SvgComponents";
-import DarkModeToggle from "@/lib/features/navbar/darkmode/DarkModeToggle";
-import NavMenuButton from "@/lib/features/navbar/menu/NavMenuButton";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (

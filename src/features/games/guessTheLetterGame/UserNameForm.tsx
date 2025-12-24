@@ -1,11 +1,11 @@
 "use client";
+import {
+    disableGuessGameUserNameInput,
+    selectGuessGameInputDisabled,
+    setGuessGameUserName,
+} from "@/features/games/guessTheLetterGame/GuessGame.slice";
 import StyledButton from "@/lib/components/StyledButton";
 import StyledInput from "@/lib/components/StyledInput";
-import {
-  disableGuessGameUserNameInput,
-  selectGuessGameInputDisabled,
-  setGuessGameUserName,
-} from "@/lib/features/games/guessTheLetterGame/GuessGame.slice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import clsx from "clsx";
 import React, { useRef } from "react";
@@ -13,7 +13,7 @@ import styles from "./GuessGame.module.css";
 
 const triggerValidationFeedback = (
   inputRef: React.RefObject<HTMLInputElement | null>,
-  message: string
+  message: string,
 ) => {
   const field = inputRef.current;
   if (field) {
@@ -42,7 +42,7 @@ const UserNameForm = () => {
     if (!nameRegex.test(userInput)) {
       triggerValidationFeedback(
         inputRef,
-        "Please enter a valid first name (2-15 letters, no numbers, spaces or special characters)"
+        "Please enter a valid first name (2-15 letters, no numbers, spaces or special characters)",
       );
       return;
     }
