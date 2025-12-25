@@ -1,12 +1,12 @@
 "use client";
-import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import clsx from "clsx";
 import { useEffect } from "react";
 import Typewriter from "../components/Typewriter";
 import {
-  selectGuessGameInputDisabled,
-  selectGuessGameUserName,
-  setInstructionsComplete,
+    selectGuessGameInputDisabled,
+    selectGuessGameUserName,
+    setInstructionsComplete,
 } from "./GuessGame.slice";
 import styles from "./UserInstructions.module.css";
 

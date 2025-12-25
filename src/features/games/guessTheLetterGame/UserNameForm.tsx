@@ -1,12 +1,12 @@
 "use client";
 import {
-    disableGuessGameUserNameInput,
-    selectGuessGameInputDisabled,
-    setGuessGameUserName,
+  disableGuessGameUserNameInput,
+  selectGuessGameInputDisabled,
+  setGuessGameUserName,
 } from "@/features/games/guessTheLetterGame/GuessGame.slice";
 import StyledButton from "@/lib/components/StyledButton";
 import StyledInput from "@/lib/components/StyledInput";
-import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import clsx from "clsx";
 import React, { useRef } from "react";
 import styles from "./GuessGame.module.css";

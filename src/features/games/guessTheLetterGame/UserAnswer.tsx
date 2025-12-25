@@ -1,7 +1,7 @@
 "use client";
 import StyledButton from "@/lib/components/StyledButton";
 import StyledInput from "@/lib/components/StyledInput";
-import { useAppSelector } from "@/lib/hooks";
+import { useAppSelector } from "@/store/hooks";
 import { FormEvent, useEffect, useState } from "react";
 import { selectGuessGameState } from "./GuessGame.slice";
 import styles from "./UserAnswer.module.css";
@@ -10,14 +10,14 @@ const UserAnswer = () => {
   const guessGameState = useAppSelector(selectGuessGameState);
   const { isInstructionsComplete, userName } = guessGameState;
   const length = userName.length;
-  const [score, setScore] = useState(length);
+  const [remainingGuess, setRemainingGuess] = useState(length);
   useEffect(() => {
-    setScore(length);
+    setRemainingGuess(length);
   }, [length, userName]);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setScore(score - 1);
+    setRemainingGuess(remainingGuess - 1);
   };
 
   if (!isInstructionsComplete) return;
@@ -25,7 +25,7 @@ const UserAnswer = () => {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <p className={styles.info}>
-        <strong>Score:</strong> {score}
+        <strong>Remaining Guess:</strong> {remainingGuess}
       </p>
       <StyledInput
         type="number"

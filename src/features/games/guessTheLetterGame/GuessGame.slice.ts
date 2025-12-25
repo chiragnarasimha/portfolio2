@@ -1,5 +1,5 @@
+import { RootState } from "@/store/store";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "@/lib/store";
 
 type GuessGameState = {
   userName: string;
